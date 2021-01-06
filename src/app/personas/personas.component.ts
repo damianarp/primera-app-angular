@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class PersonasComponent {
   agregarPersona = false;
   agregarPersonaStatus = "No se ha agregado ninguna persona";
-  tituloPersona = "";
+  tituloPersona = "Ingeniero";
 
   constructor(){
     setTimeout(() => {
