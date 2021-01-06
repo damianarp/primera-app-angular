@@ -7,11 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent {
-  agregarPersona=false;
+  agregarPersona = false;
+  agregarPersonaStatus = "No se ha agregado ninguna persona";
+  tituloPersona = "";
 
   constructor(){
     setTimeout(() => {
       this.agregarPersona = true;
     }, 3000);
+  }
+
+  onCrearPersona(){
+    this.agregarPersonaStatus = "Persona agregada";
+  }
+
+  onModificarPersona(event:Event){
+    this.tituloPersona = (<HTMLInputElement>event.target).value;
   }
 }

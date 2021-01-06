@@ -1,8 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <label>Título Persona</label>
+      <input type="text" class="form-control" (input)="onModificarPersona($event)">
+      {{tituloPersona}}
+
       <h1>Listado de Personas</h1>
-      <button class="btn btn-primary" [disabled]="!agregarPersona">Agregar Persona</button>
+      <button class="btn btn-primary"
+      [disabled]="!agregarPersona"
+      (click)="onCrearPersona()">
+          Agregar Persona
+      </button>
+      <p>{{agregarPersonaStatus}}</p>
       <app-persona></app-persona>
     </div>
   </div>
