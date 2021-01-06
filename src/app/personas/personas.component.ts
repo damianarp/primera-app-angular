@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent {
+  agregarPersona=false;
 
+  constructor(){
+    setTimeout(() => {
+      this.agregarPersona = true;
+    }, 3000);
+  }
 }
