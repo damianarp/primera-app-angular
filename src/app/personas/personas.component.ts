@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-personas',
@@ -10,6 +10,7 @@ export class PersonasComponent {
   agregarPersona = false;
   agregarPersonaStatus = "No se ha agregado ninguna persona";
   tituloPersona = "Ingeniero";
+  personaCreada = false;
 
   constructor(){
     setTimeout(() => {
@@ -18,6 +19,7 @@ export class PersonasComponent {
   }
 
   onCrearPersona(){
+    this.personaCreada = true;
     this.agregarPersonaStatus = "Persona agregada";
   }
 
